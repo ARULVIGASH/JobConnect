@@ -13,11 +13,11 @@ import javax.crypto.SecretKey;
 public class JwtService {
 
     private static final String SECRET_KEY =
-            "Your secret key";
+        System.getenv("JWT_SECRET");
 
-    private final SecretKey key = Keys.hmacShaKeyFor(
-            SECRET_KEY.getBytes()
-    );
+private final SecretKey key = Keys.hmacShaKeyFor(
+        SECRET_KEY.getBytes(java.nio.charset.StandardCharsets.UTF_8)
+);
 
     private final long expirationTime = 1000 * 60 * 60 * 24;
 
