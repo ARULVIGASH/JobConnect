@@ -16,9 +16,14 @@ public class CorsConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(
-                List.of("http://localhost:5175")
-        );
+       
+configuration.setAllowedOrigins(
+        List.of(
+                "http://localhost:5175",
+                "https://job-connect-iota-three.vercel.app"
+        )
+);
+
 
         configuration.setAllowedMethods(
                 List.of(
