@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:8081/api'
+  baseURL: 'https://jobconnect-production-4345.up.railway.app/api'
 })
 
 api.interceptors.request.use(
