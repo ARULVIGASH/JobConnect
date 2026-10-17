@@ -43,7 +43,7 @@ function Navbar() {
     const fetchUnreadCount = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:8081/api/notifications/me/unread-count',
+          'https://jobconnect-production-4345.up.railway.app/api/notifications/me/unread-count',
           {
             headers: {
               Authorization: `Bearer ${token}`,
